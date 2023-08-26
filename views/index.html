@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Job List</title>
+        <link href="/public/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="jobs">
+            <form method="post">
+                <input type="text" name="job"/>
+                <input type="submit" name="action" value="submit"/>
+            </form>
+            <% for(let i=0; i < jobs.length; i++){ %>
+                <h1><%= jobs[i] %> | <a href="/delete/<%= i %>">DEL</a></h1>
+            <%} %>
+        </div>
+    </body>
+</html>
